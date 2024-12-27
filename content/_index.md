@@ -39,24 +39,18 @@ h5 {
 <!-- I am a bachelor student majoring in computer science. -->
 
 ##### About Me
-
-
-不知道在干啥中。
-
+I am suspending.
 <div class=footnotes>
 <hr>
 </div>
 
 ##### Forest
-A forest of  [My Evergreen Notes](https://shusoyo.github.io/forest/).
+A forest of [My Evergreen Notes](https://shusoyo.github.io/forest/).
 
 ##### Study Notes
 A [Notion Site](https://epoches.notion.site/epoches/Personal-Home-2d6bc74f056c44f084e2f5fd3a49103a) on my own.
 
 
-
-
 <!-- ##### Contact
-\- Github: [github.com/suspenss](https://github.com/suspenss)        
+\- Github: [github.com/suspenss](https://github.com/suspenss)
 \- Email: [tniasu.gmail.com]() -->
-

@@ -47,113 +47,113 @@ uglyURLs = false
 
 # URL 结构
 [permalinks]
-    categories = "/categories/:slug/"
-    tags = "/tags/:slug/"
+categories = "/categories/:slug/"
+tags = "/tags/:slug/"
 
 # 类别
 [taxonomies]
-    category = "categories"
-    tag = "tags"
+category = "categories"
+tag = "tags"
 
 # 修改时间
 [frontmatter]
-    lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 
 [pagination]
-    disableAliases = false
-    # 每一分页的文章数（仅对「文章摘要」首页布局有效）
-    pagerSize = 5
-    path = 'page'
+disableAliases = false
+# 每一分页的文章数（仅对「文章摘要」首页布局有效）
+pagerSize = 5
+path = 'page'
 
 # Markdown 渲染器
 [markup]
-    defaultMarkdownHandler = "goldmark"
-    [markup.goldmark]
-        [markup.goldmark.extensions]
-            definitionList = true
-            footnote = true
-            linkify = true
-            strikethrough = true
-            table = true
-            taskList = true
-            typographer = false
-        [markup.goldmark.parser]
-            attribute = true
-            autoHeadingID = true
-            autoHeadingIDType = "github"
-        [markup.goldmark.renderer]
-            hardWraps = false
-            unsafe = true
-            xHTML = false
-    [markup.highlight]
-        codeFences = true
-        guessSyntax = false
-        lineNos = true
-        lineNumbersInTable = true
-        noClasses = false
-    [markup.tableOfContents]
-        startLevel = 2
-        endLevel = 6
-        ordered = true
+defaultMarkdownHandler = "goldmark"
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = false
+[markup.goldmark.parser]
+attribute = true
+autoHeadingID = true
+autoHeadingIDType = "github"
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xHTML = false
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 6
+ordered = true
 
 # 压缩 HTML
 [minify.tdewolff.html]
-    keepWhitespace = false
+keepWhitespace = true
 
 # 相关文章
 [related]
-    threshold = 80
-    includeNewer = true
-    toLower = true
-    [[related.indices]]
-        name = "categories"
-        weight = 100
-    [[related.indices]]
-        name = "tags"
-        weight = 95
-    [[related.indices]]
-        name = "date"
-        weight = 10
-        pattern = "2006"
+threshold = 80
+includeNewer = true
+toLower = true
+[[related.indices]]
+name = "categories"
+weight = 100
+[[related.indices]]
+name = "tags"
+weight = 95
+[[related.indices]]
+name = "date"
+weight = 10
+pattern = "2006"
 
 # Atom 文件格式的媒体类型
 [mediaTypes."application/atom+xml"]
-    suffixes = ["xml"]
+suffixes = ["xml"]
 
 # MemE 主题自定义的 Atom 模板
 [outputFormats.SectionsAtom]
-    mediaType = "application/atom+xml"
-    baseName = "atom"
+mediaType = "application/atom+xml"
+baseName = "atom"
 
 # MemE 主题自定义的 RSS 模板
 [outputFormats.SectionsRSS]
-    mediaType = "application/rss+xml"
-    baseName = "rss"
+mediaType = "application/rss+xml"
+baseName = "rss"
 
 # lunr.js 的搜索索引
 [outputFormats.SearchIndex]
-    mediaType = "application/json"
-    baseName = "search"
+mediaType = "application/json"
+baseName = "search"
 
 # Algolia 的搜索索引
 [outputFormats.Algolia]
-    mediaType = "application/json"
-    baseName = "algolia"
-    isPlainText = true
-    notAlternative = true
+mediaType = "application/json"
+baseName = "algolia"
+isPlainText = true
+notAlternative = true
 
 # Hugo 的输出控制
 [outputs]
-    page = ["HTML"]
-    # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
-    home = ["HTML", "SectionsAtom", "SectionsRSS"]
-    section = ["HTML"]
-    taxonomy = ["HTML"]
-    term = ["HTML"]
+page = ["HTML"]
+# home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
+home = ["HTML", "SectionsAtom", "SectionsRSS"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 # RSS & Atom 文章数限制
 [services.rss]
-    limit = -1
+limit = -1
 
 ##########################################
 # 菜单配置
@@ -191,12 +191,11 @@ uglyURLs = false
 #     weight = 2
 #     pre = "internal"
 #     post = "archive"
-[[menu.main]]
-pageref = "/categories/"
-name = " Categories"
-weight = 4
-pre = "internal"
-# post = "th"
+# [[menu.main]]
+# pageref = "/categories/"
+# name = " Categories"
+# weight = 4
+# pre = "internal"
 # [[menu.main]]
 #     pageref = "/tags/"
 #     name = "标签"
@@ -233,7 +232,7 @@ pre = "internal"
 # identifier = "life"
 [[menu.main]]
 url = "/tags/"
-name = "Tags "
+name = "Tags"
 weight = 4
 pre = "internal"
 # post = "archive"
@@ -369,8 +368,6 @@ homeLayout = "page"
 ## 「诗意人生」
 # 诗句，支持 Markdown
 homePoetry = [
-    "##### [What can I hold you with?](/archives/)",
-    "I can give you my loneliness, my darkness",
     # "the hunger of my heart",
     # "I am trying to bribe you with uncertainty",
     # "with danger, with defeat.",
@@ -523,14 +520,14 @@ limitEntriesLimit = -1
 # 说明：分区的名字即站点的 content 目录下
 #      的文件夹的名字。
 
-mainSections = ["tech", "pen"]
+mainSections = ["pen"]
 
 
 ######################################
 # Atom & RSS
 
 # 是否包括全文内容
-includeContent = true
+includeContent = false
 #      要，Hugo 能按你设置的字数限制自动截
 #      取，你也可以在文章中通过
 #      `<!--more-->`（没有空格）手动控制，
@@ -554,7 +551,7 @@ defaultTheme = "light"
 # 说明：light（浅色模式）或 dark（深色模式）
 
 # 是否隐藏模式切换开关
-hideThemeToggle = false
+hideThemeToggle = true
 # 是否在首页隐藏模式切换开关
 hideThemeToggleInHome = true
 # 说明：如果开启了深色模式，即使你隐藏了开关，
@@ -1009,7 +1006,8 @@ fontFamilyFooter = "monospace"
 fontFamilyBody = "'Shippori Mincho', 'Noto Serif SC', serif"
 
 # 网络字体链接
-fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;700;800&family=Fira+Code:wght@400;700&display=swap"
+# fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;700;800&family=Fira+Code:wght@400;700&display=swap"
+fontsLink = "https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Fira+Code:wght@400;700&display=swap"
 # fontsLink = ""
 # 说明：要想读者一定体验到你设置的字体，最好
 #      采用网络字体。MemE 主题目前仅支持

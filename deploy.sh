@@ -18,4 +18,4 @@ cp -a ./public/. ../output
 cd ../output
 git add .
 git commit -m "Deploy"
-# git push
+git push -f
